@@ -2,6 +2,9 @@ package br.ufes.gerenciamento.presenter.usuario;
 
 import br.ufes.gerenciamento.model.Usuario;
 import br.ufes.gerenciamento.presenter.MainPresenter;
+import br.ufes.gerenciamento.state.usuario.GerenciarState;
+import br.ufes.gerenciamento.state.usuario.InclusaoState;
+import br.ufes.gerenciamento.state.usuario.VisualizacaoState;
 import br.ufes.gerenciamento.view.VisualizarUsuarioView;
 
 import javax.swing.*;

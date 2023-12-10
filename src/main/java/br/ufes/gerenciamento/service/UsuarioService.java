@@ -7,6 +7,9 @@ import br.ufes.gerenciamento.dao.IUsuarioDAO;
 import br.ufes.gerenciamento.dao.IUsuarioDAOFactory;
 import br.ufes.gerenciamento.factory.NotificacaoDAOFactory;
 import br.ufes.gerenciamento.factory.UsuarioDAOFactory;
+import br.ufes.gerenciamento.logger.Log;
+import br.ufes.gerenciamento.logger.LogError;
+import br.ufes.gerenciamento.logger.LogInfo;
 import br.ufes.gerenciamento.model.Notificacao;
 import br.ufes.gerenciamento.model.Usuario;
 import br.ufes.gerenciamento.observer.Observable;
@@ -17,9 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UsuarioService extends Observable {
-
-    // TODO: COMMITAR CLASSES DE LOG!
-
     private final int SCRIPT_N = 16384;
     private final int SCRIPT_R = 8;
     private final int SCRIPT_P = 1;

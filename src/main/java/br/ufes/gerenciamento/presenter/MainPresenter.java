@@ -11,9 +11,6 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MainPresenter implements Observer {
-
-    // TODO: COMMITAR CLASSES DE PRESENTER E SERVICE!
-
     private PrincipalView view;
     private PrincipalState state;
 

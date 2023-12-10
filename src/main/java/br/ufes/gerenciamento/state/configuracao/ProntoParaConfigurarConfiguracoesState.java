@@ -2,13 +2,9 @@ package br.ufes.gerenciamento.state.configuracao;
 
 import br.ufes.gerenciamento.Application;
 import br.ufes.gerenciamento.presenter.ConfiguracoesPresenter;
-import br.ufes.gerenciamento.command.configuracoes.AlterarLogCommandTamplate;
 import javax.swing.*;
 
 public class ProntoParaConfigurarConfiguracoesState extends ConfiguracoesState {
-
-    // TODO COMMITAR CLASSES DE LOG E COMMAND
-
     public ProntoParaConfigurarConfiguracoesState(ConfiguracoesPresenter presenter) {
         super(presenter);
         this.view.getBtnFechar().setEnabled(true);

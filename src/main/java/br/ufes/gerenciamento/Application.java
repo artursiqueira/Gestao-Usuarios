@@ -1,6 +1,8 @@
 
 package br.ufes.gerenciamento;
 
+import br.ufes.gerenciamento.logger.adapter.LoggerAdapter;
+import br.ufes.gerenciamento.logger.adapter.LoggerAdapterFactory;
 import br.ufes.gerenciamento.presenter.MainPresenter;
 import br.ufes.gerenciamento.session.Session;
 import br.ufes.gerenciamento.util.Configuracoes;
@@ -10,9 +12,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Application {
-
-    // TODO: COMMITAR IMPLEMENTAÇÃO DE LOG!
-
     private static Session session;
     private static LoggerAdapter logger;
     private static String logFormat;
@@ -38,14 +37,14 @@ public class Application {
     }
 
     private static void getProperties() {
-        setLogFormat(propertyManager.getConfig("logFormat"));
+        setLogFormat(propertyManager.getConfiguracao("logFormat"));
     }
 
     public static void changeLogFormat(String logFormat) {
         LoggerAdapter loggerOld = Application.logger;
         Application.logger = new LoggerAdapterFactory().cria(logFormat);
         Application.logger.migraLogger(loggerOld);
-        propertyManager.defineConfig("logFormat", logFormat);
+        propertyManager.defineConfiguracao("logFormat", logFormat);
         Application.logFormat = logFormat;
 
     }

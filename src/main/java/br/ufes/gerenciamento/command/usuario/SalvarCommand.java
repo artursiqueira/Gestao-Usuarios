@@ -1,6 +1,7 @@
 package br.ufes.gerenciamento.command.usuario;
 
 import br.ufes.gerenciamento.model.Usuario;
+import br.ufes.gerenciamento.presenter.usuario.VisualizarUsuarioPresenter;
 import br.ufes.gerenciamento.service.UsuarioService;
 import br.ufes.gerenciamento.session.Session;
 
@@ -9,10 +10,10 @@ import java.time.LocalDate;
 
 public class SalvarCommand extends EditarCommand {
     private Usuario novoUsuario;
+
     public SalvarCommand(VisualizarUsuarioPresenter presenter) {
         super(presenter);
     }
-
     @Override
     public void executar() {
         if(Session.isAutenticado()) {
@@ -37,11 +38,8 @@ public class SalvarCommand extends EditarCommand {
                         JOptionPane.INFORMATION_MESSAGE
                 );
             }
-
         }
-
     }
-
     private void salvarUsuario(boolean admin) {
         String nome = this.view.getTxtNome().getText();
         String usuario = this.view.getTxtUsuario().getText();
@@ -53,5 +51,4 @@ public class SalvarCommand extends EditarCommand {
 
         this.service.criarUsuario(novoUsuario);
     }
-
 }

@@ -7,11 +7,11 @@ import javax.swing.*;
 
 public class ExcluirCommand extends EditarCommand {
     private Usuario usuario;
+
     public ExcluirCommand(VisualizarUsuarioPresenter presenter, Usuario usuario) {
         super(presenter);
         this.usuario = usuario;
     }
-
     @Override
     public void executar() {
         int confirmado = JOptionPane.showConfirmDialog(
@@ -30,8 +30,6 @@ public class ExcluirCommand extends EditarCommand {
             );
             this.view.dispose();
         }
-
     }
-
 }
 

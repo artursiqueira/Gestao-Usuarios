@@ -2,6 +2,7 @@ package br.ufes.gerenciamento.command.usuario;
 
 import br.ufes.gerenciamento.model.Usuario;
 import br.ufes.gerenciamento.presenter.usuario.VisualizarUsuarioPresenter;
+import br.ufes.gerenciamento.state.usuario.VisualizacaoState;
 
 import javax.swing.*;
 import java.time.LocalDate;
@@ -13,7 +14,6 @@ public class AtualizarCommand extends EditarCommand {
         super(presenter);
         this.usuario = usuario;
     }
-
     @Override
     public void executar() {
         String nome = this.view.getTxtNome().getText();
@@ -48,14 +48,11 @@ public class AtualizarCommand extends EditarCommand {
             }
 
         }
-
         JOptionPane.showMessageDialog(
                 this.view,
                 "Usuario Atualizado",
                 "Sucesso",
                 JOptionPane.INFORMATION_MESSAGE
         );
-
     }
-
 }

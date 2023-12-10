@@ -11,9 +11,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class LoginPresenter {
-
-    //TODO: COMMITAR CLASSE UsuarioService!
-
     private LoginView view;
     private UsuarioService usuarioService;
     private MainPresenter mainPresenter;

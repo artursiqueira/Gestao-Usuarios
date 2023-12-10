@@ -5,7 +5,6 @@ import br.ufes.gerenciamento.dao.IUsuarioDAOFactory;
 import br.ufes.gerenciamento.daoimpl.UsuarioSQLiteDAO;
 
 public class UsuarioDAOFactory implements IUsuarioDAOFactory {
-
     @Override
     public IUsuarioDAO cria(String tipo) {
         switch (tipo) {

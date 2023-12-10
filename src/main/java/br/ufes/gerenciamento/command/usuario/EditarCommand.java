@@ -10,7 +10,6 @@ import com.pss.senha.validacao.ValidadorSenha;
 import java.util.List;
 
 public abstract class EditarCommand implements ICommand {
-
     protected UsuarioService service = UsuarioService.getInstancia();
     protected VisualizarUsuarioPresenter presenter;
     protected VisualizarUsuarioView view;
@@ -19,10 +18,8 @@ public abstract class EditarCommand implements ICommand {
         this.presenter = presenter;
         this.view = presenter.getView();
     }
-
     @Override
     public abstract void executar();
-
     public final void validar(Usuario usuario, boolean validarSenha) {
         if(usuario.getNome().trim().isEmpty()) {
             throw new RuntimeException("Informe um nome para o usuário!");
@@ -42,6 +39,5 @@ public abstract class EditarCommand implements ICommand {
                 throw new RuntimeException(errosSenha.get(0));
             }
         }
-
     }
 }

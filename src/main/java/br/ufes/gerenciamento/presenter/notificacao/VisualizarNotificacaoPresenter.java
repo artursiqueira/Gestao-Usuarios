@@ -3,6 +3,9 @@ package br.ufes.gerenciamento.presenter.notificacao;
 import br.ufes.gerenciamento.model.Notificacao;
 import br.ufes.gerenciamento.model.Usuario;
 import br.ufes.gerenciamento.presenter.MainPresenter;
+import br.ufes.gerenciamento.state.notificacao.EnvioNotificacaoState;
+import br.ufes.gerenciamento.state.notificacao.VisualizacaoNotificacaoState;
+import br.ufes.gerenciamento.state.notificacao.VisualizarNotificacaoState;
 import br.ufes.gerenciamento.view.VisualizarNotificacaoView;
 
 import javax.swing.*;

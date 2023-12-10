@@ -9,11 +9,10 @@ public class AlterarLogCommandTamplate extends CommandTemplate{
     public AlterarLogCommandTamplate(ConfiguracoesPresenter presenter){
         super(presenter);
     }
-
     @Override
     public void executar() {
         String novoFormatoLog = (String) this.view.getCbFormatoLog().getSelectedItem();
-        if (novoFormatoLog.equals(Application.getLogFormat())) {  // TODO: COMMITAR CLASSES DE LOG !!
+        if (novoFormatoLog.equals(Application.getLogFormat())) {
             JOptionPane.showMessageDialog(
                     view,
                     "O formato selecionado deve ser diferente do atual.",
@@ -33,7 +32,7 @@ public class AlterarLogCommandTamplate extends CommandTemplate{
                     public void run() {
                         try {
                             onStart();
-                            Application.changeLogFormat(novoFormatoLog); // TODO: COMMITAR CLASSES DE LOG !!
+                            Application.changeLogFormat(novoFormatoLog);
                             onSuccess();
                         } catch (RuntimeException ex) {
                             onError(ex);
