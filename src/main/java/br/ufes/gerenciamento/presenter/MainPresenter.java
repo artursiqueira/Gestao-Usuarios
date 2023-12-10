@@ -1,5 +1,7 @@
 package br.ufes.gerenciamento.presenter;
 
+import br.ufes.gerenciamento.presenter.usuario.VisualizarUsuarioPresenter;
+import br.ufes.gerenciamento.service.UsuarioService;
 import br.ufes.gerenciamento.state.principal.NaoLogadoState;
 import br.ufes.gerenciamento.state.principal.PrincipalState;
 import br.ufes.gerenciamento.observer.Observer;

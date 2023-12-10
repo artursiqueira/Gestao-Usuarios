@@ -1,13 +1,14 @@
 package br.ufes.gerenciamento.state.principal;
 
 import br.ufes.gerenciamento.Application;
+import br.ufes.gerenciamento.presenter.ConfiguracoesPresenter;
 import br.ufes.gerenciamento.presenter.MainPresenter;
 import br.ufes.gerenciamento.model.Usuario;
+import br.ufes.gerenciamento.presenter.notificacao.BuscarNotificacaoPresenter;
+import br.ufes.gerenciamento.presenter.usuario.BuscarUsuarioPresenter;
+import br.ufes.gerenciamento.presenter.usuario.VisualizarUsuarioPresenter;
 
 public class LogadoState extends PrincipalState {
-
-    // TODO: COMMITAR CLASSES DE PRESENTER E LOG!
-
     private Usuario usuarioAutenticado;
     public LogadoState(MainPresenter presenter) {
         super(presenter);

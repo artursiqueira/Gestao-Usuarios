@@ -1,6 +1,8 @@
 package br.ufes.gerenciamento.presenter;
 
 import br.ufes.gerenciamento.Application;
+import br.ufes.gerenciamento.presenter.usuario.VisualizarUsuarioPresenter;
+import br.ufes.gerenciamento.service.UsuarioService;
 import br.ufes.gerenciamento.state.principal.LogadoState;
 import br.ufes.gerenciamento.model.Usuario;
 import br.ufes.gerenciamento.view.LoginView;
