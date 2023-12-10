@@ -2,6 +2,7 @@ package br.ufes.gerenciamento.state.notificacao;
 
 import br.ufes.gerenciamento.command.notificacao.AprovarCommand;
 import br.ufes.gerenciamento.command.notificacao.ExcluirCommand;
+import br.ufes.gerenciamento.command.notificacao.RecusarCommand;
 import br.ufes.gerenciamento.model.Notificacao;
 import br.ufes.gerenciamento.model.Usuario;
 import br.ufes.gerenciamento.presenter.notificacao.VisualizarNotificacaoPresenter;
