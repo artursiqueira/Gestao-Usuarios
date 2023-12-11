@@ -2,6 +2,7 @@ package br.ufes.gerenciamento.state.configuracao;
 
 import br.ufes.gerenciamento.Application;
 import br.ufes.gerenciamento.presenter.ConfiguracoesPresenter;
+import br.ufes.gerenciamento.command.configuracoes.AlterarLogCommandTemplate;
 import javax.swing.*;
 
 public class ProntoParaConfigurarConfiguracoesState extends ConfiguracoesState {
@@ -12,7 +13,6 @@ public class ProntoParaConfigurarConfiguracoesState extends ConfiguracoesState {
         this.view.getCbFormatoLog().setEnabled(true);
         this.view.getCbFormatoLog().setSelectedItem(Application.getLogFormat());
     }
-
     @Override
     public void salvar() {
         new AlterarLogCommandTemplate(presenter) {

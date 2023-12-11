@@ -3,16 +3,18 @@ package br.ufes.gerenciamento.command.configuracoes;
 import br.ufes.gerenciamento.Application;
 import br.ufes.gerenciamento.presenter.ConfiguracoesPresenter;
 
-import javax.swing.*;
 
-public class AlterarLogCommandTamplate extends CommandTemplate{
-    public AlterarLogCommandTamplate(ConfiguracoesPresenter presenter){
+import javax.swing.*;
+import java.util.Objects;
+
+public class AlterarLogCommandTemplate extends CommandTemplate{
+    public AlterarLogCommandTemplate(ConfiguracoesPresenter presenter){
         super(presenter);
     }
     @Override
     public void executar() {
         String novoFormatoLog = (String) this.view.getCbFormatoLog().getSelectedItem();
-        if (novoFormatoLog.equals(Application.getLogFormat())) {
+        if (Objects.equals(novoFormatoLog, Application.getLogFormat())) {
             JOptionPane.showMessageDialog(
                     view,
                     "O formato selecionado deve ser diferente do atual.",
